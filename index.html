@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-anim"></div>
+    <div id="menuContainer">
+        <h1>Flipping</h1>
+        <ol>
+            <li>Input your username and choose a color</li>
+            <li>Play with legal moves and outflank your opponent</li>
+            <li>If both players cannot play any legal moves anymore, the game is over</li>
+            <li>The winner is decided from the total of discs on the board</li>
+            <li>Have fun!</li>
+        </ol>
+        <input type="text" id="usernameInput" placeholder="Enter Username">
+        <div class="group-buttons">
+            <button id="whiteDiscBtn">White</button>
+            <button id="blackDiscBtn">Black</button>
+        </div>
+        <button id="startBtn" disabled>Start Game</button>
+    </div>
+
+    <div id="gameContainer">
+        <div class="game-stats">
+            <b>Name: <span id="usernameText">0</span></b>
+            <b>White: <span id="whiteDiscCountText">0</span></b>
+            <b>Black: <span id="blackDiscCountText">0</span></b>
+            <button id="musicBtn">Enable Music</button>
+        </div>
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="game-over-screen" id="gameOverScreen">
+        <p id="gameOverText"></p>
+    </div>
+    <div class="countdown-screen" id="countdownScreen">
+        <p id="countdownText">3</p>
+    </div>
+
+    <audio src="./background.mp3" id="backgroundMusic" loop></audio>
+    
+    <script src="menu.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
